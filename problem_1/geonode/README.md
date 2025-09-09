@@ -10,5 +10,5 @@ Python 3.10.12
 1. Build the app `docker compose up -d --build`.
 2. Create superuser account `docker compose run --rm django python manage.py createsuperuser`.
 3. Go to `localhost:8080` to start scraping or `localhost:8080/schedule` to trigger the scheduling task.
-4. You can also change the time or day you want to schedule in the code just go to `scraper/task.py` or add periodic time in admin panel.
+4. You can also change the time or day you want to schedule in the code just go to `scraper/views.py` or add periodic time in admin panel.
 
