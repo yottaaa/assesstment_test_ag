@@ -6,8 +6,9 @@ then set up a celery schedule to run this task every day.
 ### environment
 Python 3.10.12
 
-### commands in different terminal
-- `python manage.py runserver`
-- `celery -A geonode worker -l INFO`
-- `celery -A geonode beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler`
+### instructions
+1. Build the app `docker compose up -d --build`.
+2. Create superuser account `docker compose run --rm django python manage.py createsuperuser`.
+3. Go to `localhost:8080` to start scraping or `localhost:8080/schedule` to trigger the scheduling task.
+4. You can also change the time or day you want to schedule in the code just go to `scraper/task.py` or add periodic time in admin panel.
 
