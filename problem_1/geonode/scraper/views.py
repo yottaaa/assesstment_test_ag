@@ -10,8 +10,8 @@ def index(request):
 
 def schedule_task(request):
     interval, _ = IntervalSchedule.objects.get_or_create(
-        every=24,
-        period=IntervalSchedule.HOURS,
+        every=2,
+        period=IntervalSchedule.MINUTES,
     )
 
     PeriodicTask.objects.create(
